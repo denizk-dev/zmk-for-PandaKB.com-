@@ -1,6 +1,6 @@
 file_format: "1"
-id: lily58_donge
-name: Lily58_dongle
+id: Sofle_donge
+name: Sofle_dongle
 type: shield
 url: https://pandakb.com
 requires: [nice!nano]
@@ -13,6 +13,6 @@ features:
   - underglow
   - encoder
 siblings:
-  - Lily58_dongle_central
-  - Lily58_dongle_left
-  - Lily58_dongle_right
+  - Sofle_dongle_central
+  - Sofle_dongle_left
+  - Sofle_dongle_right

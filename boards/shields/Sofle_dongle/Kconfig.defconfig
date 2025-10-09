@@ -1,17 +1,19 @@
-if SHIELD_LILY58_LEFT
+if SHIELD_SOFLE_DONGLE_CONTRAL
 
 config ZMK_KEYBOARD_NAME
-    default "Lily58"
+    default "Sofle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT
+
+if SHIELD_SOFLE_DONGLE_LEFT || SHIELD_SOFLE_DONGLE_RIGHT
 
 config ZMK_SPLIT
     default y
+
 
 if ZMK_DISPLAY
 
@@ -21,9 +23,13 @@ config I2C
 config SSD1306
     default y
 
-endif # ZMK_DISPLAY
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
 
-if LVGL
+endif
+
+if SSD1306
 
 config LV_Z_VDB_SIZE
     default 64
@@ -38,6 +44,7 @@ choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
 
-endif # LVGL
+endif
+
 
 endif
