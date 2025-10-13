@@ -1,0 +1,11 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_HELIX_DONGLE_CENTRAL
+    def_bool $(shields_list_contains,Helix_dongle_central)
+
+config SHIELD_HELIX_DONGLE_LEFT
+    def_bool $(shields_list_contains,Helix_dongle_left)
+
+config SHIELD_HELIX_DONGLE_RIGHT
+    def_bool $(shields_list_contains,Helix_dongle_right)

@@ -1,6 +1,6 @@
 file_format: "1"
-id: PandaKB.com_Corne
-name: PandaKB.com_Corne
+id: PandaKB.com_Helix
+name: PandaKB.com_Helix
 type: shield
 url: https://pandakb.com/
 requires: [nice!nano]
@@ -11,6 +11,6 @@ features:
   - studio
   - dongle
 siblings:
-  - Corne_dongle_central
-  - Corne_dongle_left
-  - Corne_dongle_right
+  - Helix_dongle_central
+  - Helix_dongle_left
+  - Helix_dongle_right

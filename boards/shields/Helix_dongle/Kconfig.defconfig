@@ -1,23 +1,19 @@
-if SHIELD_CORNE_LEFT
+if SHIELD_HELIX_DONGLE_CENTRAL
 
 config ZMK_KEYBOARD_NAME
-	default "Corne"
+    default "Helix"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
-
-endif
-
-if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
-
-config ZMK_SPLIT
-	default y
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 endif
-if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
+
+
+if SHIELD_HELIX_DONGLE_LEFT || SHIELD_HELIX_DONGLE_RIGHT
 
 config ZMK_SPLIT
     default y
+
 
 if ZMK_DISPLAY
 
@@ -27,9 +23,13 @@ config I2C
 config SSD1306
     default y
 
-endif # ZMK_DISPLAY
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
 
-if LVGL
+endif
+
+if SSD1306
 
 config LV_Z_VDB_SIZE
     default 64
@@ -44,6 +44,9 @@ choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
 
-endif # LVGL
+endif
 
 endif
+
+
+
