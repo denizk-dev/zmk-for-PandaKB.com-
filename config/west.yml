@@ -46,5 +46,8 @@ manifest:
     - name: zmk-dongle-screen
       remote: penguinchat
       revision: Penguinchat-patch-1
+    - name: zmk-for-PandaKB.com-
+      remote: penguinchat
+      revision: PandaKB_Lily58
   self:
     path: config
