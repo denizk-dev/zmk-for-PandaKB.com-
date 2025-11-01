@@ -1,6 +1,4 @@
 manifest:
-  defaults:
-    revision: v0.3
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -24,6 +22,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
+      revision: main
       import: app/west.yml
   #additional module
     - name: hammerbeam-slideshow
@@ -47,5 +46,8 @@ manifest:
     - name: zmk-dongle-screen
       remote: penguinchat
       revision: Penguinchat-patch-1
+    - name: zmk-for-PandaKB.com-
+      remote: penguinchat
+      revision: PandaKB_Lily58
   self:
     path: config
